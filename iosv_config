@@ -1,0 +1,14 @@
+vlan 2
+name staff
+int vlan 2
+ip address 192.168.100.50 255.255.255.0
+int g1/1
+switchport mode access 
+switchport access vlan 2
+vlan 3
+name student
+int vlan 3
+ip address 192.168.200.100 255.255.255.0
+int g1/2
+switchport mode access 
+switchport access vlan 3
