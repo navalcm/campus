@@ -1,0 +1,21 @@
+vlan 2
+name staff
+interface vlan 2
+ip address 10.0.10.1 255.255.255.0
+interface g1/1
+switchport mode access 
+switchport access vlan 2
+vlan 3
+name student
+interface vlan 3
+ip address 10.0.20.1 255.255.255.0
+interface g1/2
+switchport mode access 
+switchport access vlan 3
+vlan 4
+name Research
+interface vlan 4
+ip address 10.0.30.1 255.255.255.0
+int g1/3
+switchport mode access 
+switchport access vlan 4
