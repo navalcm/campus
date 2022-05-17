@@ -31,16 +31,14 @@ iosv_l2_s5 = {
     'password': 'cisco',
 }
 
-with open('iosv_access') as f:
-    lines = f.read().splitlines()
-print(lines)
 
+cfg_file = "iosv_access"
 
-all_devices = [iosv_l2_s3, iosv_l2_s4, iosv_l2_s5]
+all_devices = [iosv_l2_s1, iosv_l2_s2, iosv_l2_s3, iosv_l2_s4, iosv_l2_s5]
 
 for devices in all_devices:
     net_connect = ConnectHandler(**devices)
-    output = net_connect.send_config_set(lines)
-    print(output) 
+    output = net_connect.send_config_from_file(cfg_file)
+    print(output)
 
-f.closed 
+ 
