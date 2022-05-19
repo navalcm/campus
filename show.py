@@ -40,14 +40,10 @@ for devices in all_devices:
     net_connect = ConnectHandler(**devices)
     output = net_connect.send_config_from_file(cfg_file)
     print(output)
-
-with open('iosv_core') as f:
-    lines = f.read().splitlines()
-print (lines)
-
-all_devices = [iosv_l2_s1, iosv_l2_s2]
+    
 
 output = net_connect.send_command("show ip interface brief")
 print (output)
 
-f.closed
+
+ 
